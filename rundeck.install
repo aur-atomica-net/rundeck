@@ -16,8 +16,8 @@ post_install() {
     --shell '/bin/bash' --skel /dev/null "$_service_username" &> /dev/null
   [ -n "$_service_tmpfiles_conf" ] && /usr/bin/systemd-tmpfiles \
     --create "$_service_tmpfiles_conf" 2>/dev/null
-  mkdir -p /var/lib/rundeck{,/projects,/etc}
-  chown rundeck:rundeck /var/lib/rundeck{,/projects,/etc}
+  mkdir -p /var/lib/rundeck{,/projects}
+  chown rundeck:rundeck /var/lib/rundeck{,/projects}
   echo 'This installation of rundeck uses port 4440 by default.'
   return 0
 }
@@ -25,7 +25,7 @@ post_install() {
 post_upgrade() {
   [ -n "$_service_tmpfiles_conf" ] && systemd-tmpfiles \
     --create "$_service_tmpfiles_conf" 2>/dev/null
-  mkdir -p /var/lib/rundeck{,/projects,/etc}
+  mkdir -p /var/lib/rundeck{,/projects}
   chown -R rundeck:rundeck /var/lib/rundeck
   _is_systemd_service_enabled && cat <<EOF
 => Remember to issue the following commands:
