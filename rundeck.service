@@ -1,15 +1,15 @@
 [Unit]
-Description=Extendable continuous integration server
+Description=Open source automation service with a web console
 After=network.target
 
 [Service]
-User=jenkins
+User=rundeck
 Type=simple
-EnvironmentFile=/etc/conf.d/jenkins
+EnvironmentFile=/etc/conf.d/rundeck
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=jenkins
-ExecStart=/bin/sh -c 'eval $JENKINS_COMMAND_LINE'
+SyslogIdentifier=rundeck
+ExecStart=/bin/sh -c 'eval $RUNDECK_COMMAND_LINE'
 #MemoryLimit=768M
 OOMScoreAdjust=-1000
 LimitCPU=infinity
