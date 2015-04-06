@@ -2,15 +2,12 @@
 
 pkgname=rundeck
 pkgver=2.4.2
-pkgrel=2
+pkgrel=3
 pkgdesc='Open source automation service with a web console'
 arch=('any')
 url='http://rundeck.org/'
 license=('Apache')
 depends=('java-runtime')
-provides=('rundeck')
-conflicts=('rundeck')
-replaces=('rundeck')
 backup=('etc/conf.d/rundeck')
 install='rundeck.install'
 noextract=("rundeck-${pkgver}.jar")
