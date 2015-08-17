@@ -1,8 +1,8 @@
 # Maintainer: Jason R. McNeil <jason@jasonrm.net>
 
 pkgname=rundeck
-pkgver=2.5.1
-pkgrel=3
+pkgver=2.5.3
+pkgrel=1
 pkgdesc='Open source automation service with a web console'
 arch=('any')
 url='http://rundeck.org/'
@@ -17,7 +17,7 @@ source=("rundeck-${pkgver}.jar::http://download.rundeck.org/jar/rundeck-launcher
         'rundeck.service'
         'rundeck.tmpfiles.d'
         'LICENSE')
-sha512sums=('233c78b2842635e4a40bacadfd7995c44b3a5e76a252d9cd66ceec6febc2284199bfa495e5d972e67ecf4a6731ee84ed0e3163591b7c948467ca8cf2be884615'
+sha512sums=('b671e968bdcac80edd1a2600043f7891580f750ce9b4e1c854eb6aab030e96cd7f00815e62b328e9f7993648db9f5911e51fd1f926646a7b0e9cef34bea20284'
             '93c71ee2a011a6c4629d52858ea3a826edf705418d66ceed5247dcd11d3cec9f96a3ee52f5b0c297c8658952e3683a4c0e4d9be610ab83d64fe2e67c7931b95d'
             '06855e1e77090b6a39d0777fc2bd379cc0fe01f0135bd9a5823feafc7f1913fbd19ee476f647fe637946a982d16be572faa6d242ce0ae74e48fadfa62719a3a4'
             'f61d37ace52ec23b67cb4abbd14f138dbe36288c0d48caeaf227a4629dddb7d456b4516aca06117d710a4c6bd650372de6651c9c2bba3e658027bff596b602dc'
