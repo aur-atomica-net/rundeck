@@ -1,7 +1,7 @@
 #!groovy
 
 stage 'Load files from GitHub'
-def environment, helloworld
+def standardBuild
 fileLoader.withGit('https://github.com/aur-atomica-net/jenkins-pipeline.git', 'master', null, '') {
     standardBuild = fileLoader.load('standardBuild');
 }
