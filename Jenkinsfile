@@ -7,7 +7,7 @@ fileLoader.withGit('https://github.com/aur-atomica-net/jenkins-pipeline.git', 'm
 }
 
 stage 'Run standardBuild'
-standardBuild.run {
+standardBuild {
     environment = 'golang:1.5.0'
     mainScript = '''
 go version
