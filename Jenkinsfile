@@ -1,18 +1,16 @@
 #!groovy
 
 stage 'Load files from GitHub'
-def standardBuild
+def execute
 fileLoader.withGit('https://github.com/aur-atomica-net/jenkins-pipeline.git', 'master', null, '') {
-    standardBuild = fileLoader.load('standardBuild');
+    execute = fileLoader.load('docker/execute');
 }
 
-stage 'Run standardBuild'
-standardBuild {
+execute {
     environment = 'atomica/arch-devel:latest'
     mainScript = '''
-uname -a
+sudo -u build makepkg --force --noconfirm --syncdeps --install --nocheck
 '''
     postScript = '''
-ls -l
 '''
 }
