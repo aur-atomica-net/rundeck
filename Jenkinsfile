@@ -8,9 +8,9 @@ fileLoader.withGit('https://github.com/aur-atomica-net/jenkins-pipeline.git', 'm
 
 stage 'Run standardBuild'
 standardBuild {
-    environment = 'golang:1.5.0'
+    environment = 'docker.artfire.me/arch-devel:latest'
     mainScript = '''
-go version
+uname -a
 '''
     postScript = '''
 ls -l
