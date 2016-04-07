@@ -7,8 +7,8 @@ fileLoader.withGit('https://github.com/aur-atomica-net/jenkins-pipeline.git', 'm
 
 execute {
     environment = 'atomica/arch-devel:latest'
+    docker_arguments="-u 0:0"
     mainScript = '''
-env
 makepkg --force --noconfirm --syncdeps --install --nocheck
 '''
     postScript = '''
