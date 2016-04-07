@@ -8,7 +8,7 @@ fileLoader.withGit('https://github.com/aur-atomica-net/jenkins-pipeline.git', 'm
 
 stage 'Run standardBuild'
 standardBuild {
-    environment = 'docker.artfire.me/arch-devel:latest'
+    environment = 'atomica/arch-devel:latest'
     mainScript = '''
 uname -a
 '''
