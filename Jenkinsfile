@@ -5,4 +5,4 @@ fileLoader.withGit('https://github.com/aur-atomica-net/jenkins-pipeline.git', 'm
     makepkg = fileLoader.load('docker/makepkg');
 }
 
-makepkg()
+makepkg {}
